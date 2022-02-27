@@ -31,12 +31,13 @@ public class DiscordBot2022Application {
 	public static void main(String[] args) {
 		SpringApplication.run(DiscordBot2022Application.class, args);
 	}
+	public static String PORT = System.getenv("PORT");
+	public static String SERVER_URL = System.getenv("0.0.0.0");
 
 	@Bean
 	@ConfigurationProperties(value = "discord-api")
 	public DiscordApi discordApi() {
 		String token = env.getProperty("TOKEN");
-
 		DiscordApi api = new DiscordApiBuilder().setToken(token)
 				.setAllNonPrivilegedIntents()
 				.login()
@@ -49,6 +50,9 @@ public class DiscordBot2022Application {
 		api.addMessageCreateListener(rateListener);
 		api.addMessageCreateListener(benListener);
 		api.addMessageCreateListener(emojiRateListener);
+
+
+
 
 		return api;
 	}
