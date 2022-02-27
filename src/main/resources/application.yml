@@ -1,4 +1,2 @@
-application:
-  name: talking-ben-bot
 server:
-  port: 9006
+  port: $PORT
