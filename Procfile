@@ -1,1 +1,0 @@
-web: java $JAVA_OPTS -cp src/main/java/com.example.discord_bot_2022
