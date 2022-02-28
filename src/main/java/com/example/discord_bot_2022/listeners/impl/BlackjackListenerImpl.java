@@ -74,7 +74,7 @@ public class BlackjackListenerImpl implements BlackjackListener {
 
         if (messageCreateEvent.getMessageContent().toLowerCase().contains("!blackjack") || messageCreateEvent.getMessageContent().toLowerCase().contains("!bj")) {
             Random rand = new Random();
-            String[] val = {":a:", ":two:", ":three:",":four:", ":five:", ":six:", ":seven:", ":eight:", ":nine:", ":ten:", "JackOhReally:895893197224546304", ":woman:", ":crown:"};
+            String[] val = {":a:", ":two:", ":three:",":four:", ":five:", ":six:", ":seven:", ":eight:", ":nine:", ":ten:", "<:JackOhReally:895893197224546304>", ":woman:", ":crown:"};
             String[] face = {":heart:", ":orange_square:", ":diamonds:", ":orange_circle:"};
             int x = rand.nextInt(val.length);
             int y = rand.nextInt(face.length);
