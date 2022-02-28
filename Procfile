@@ -1,1 +1,1 @@
-Worker: java -Dserver.port=$PORT $JAVA_OPTS -jar target/discord-ben-0.0.1-SNAPSHOT.jar
+Worker: java -Dserver.port=$PORT $JAVA_OPTS -jar target/discord_bot_2022-0.0.1-SNAPSHOT.jar
