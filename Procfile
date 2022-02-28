@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS -jar -Dspring.profiles.active=production target/<BUILT_APP_NAME_HERE>.jar --port $PORT 
+web: java $JAVA_OPTS -jar -Dspring.profiles.active=production target/discord_bot_2022-0.0.1-SNAPSHOT.jar --port $PORT 
