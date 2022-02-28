@@ -17,6 +17,15 @@ public class BenListenerImpl implements BenListener {
             Random rand = new Random();
 
             int x = (rand.nextInt(7));
+            int yn = (rand.nextInt(4));
+            if(yn == 0){
+                x = 0;
+//                System.out.println("zero x");
+            }
+            else if (yn == 1){
+                x = 1;
+//                System.out.println("one x");
+            }
             System.out.println(x);
 
             switch(x){

@@ -31,8 +31,6 @@ public class DiscordBot2022Application {
 	public static void main(String[] args) {
 		SpringApplication.run(DiscordBot2022Application.class, args);
 	}
-//	public static String PORT = System.getenv("PORT");
-//	public static String SERVER_URL = System.getenv("0.0.0.0");
 
 	@Bean
 	@ConfigurationProperties(value = "discord-api")
