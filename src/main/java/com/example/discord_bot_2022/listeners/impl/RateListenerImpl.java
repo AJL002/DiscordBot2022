@@ -22,7 +22,7 @@ public class RateListenerImpl implements RateListener {
             if(number == 5) {
                 //Do the rating
                 int rating = (int) Math.floor(Math.random() * 100) + 1;
-                String temp = messageCreateEvent.getMessageContent().replace("!rate", "").replace("[", "").replace("]", "");
+                String temp = messageCreateEvent.getMessageContent().toLowerCase().replace("!rate", "").replace("[", "").replace("]", "");
 
                 messageCreateEvent.getChannel()
 
