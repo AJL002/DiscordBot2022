@@ -4,6 +4,7 @@ import com.example.discord_bot_2022.listeners.BenListener;
 import org.javacord.api.event.message.MessageCreateEvent;
 import org.springframework.stereotype.Component;
 
+import java.util.Locale;
 import java.util.Random;
 
 @Component
@@ -11,7 +12,8 @@ public class BenListenerImpl implements BenListener {
 
     @Override
     public void onMessageCreate(MessageCreateEvent messageCreateEvent) {
-        if (messageCreateEvent.getMessageContent().startsWith("!ben") || messageCreateEvent.getMessageContent().startsWith("!b")) {
+        String msg = "!ben";
+        if (messageCreateEvent.getMessageContent().toLowerCase().startsWith("!ben") || messageCreateEvent.getMessageContent().toLowerCase().startsWith("!b")) {
             Random rand = new Random();
 
             int x = (rand.nextInt(7));

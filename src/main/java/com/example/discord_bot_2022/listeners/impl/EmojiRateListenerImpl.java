@@ -5,6 +5,7 @@ import org.javacord.api.event.message.MessageCreateEvent;
 import org.javacord.api.event.message.reaction.ReactionAddEvent;
 import org.springframework.stereotype.Component;
 
+import java.util.Locale;
 import java.util.Random;
 
 @Component
@@ -13,7 +14,7 @@ public class EmojiRateListenerImpl implements EmojiRateListener {
     @Override
     public void onMessageCreate(MessageCreateEvent messageCreateEvent){
 
-        if (messageCreateEvent.getMessageContent().startsWith("!react")){
+        if (messageCreateEvent.getMessageContent().toLowerCase().startsWith("!react")){
             Random rand = new Random();
             int x = rand.nextInt(10);
             System.out.println(x);
