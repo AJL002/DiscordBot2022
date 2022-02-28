@@ -10,9 +10,9 @@ import java.util.Hashtable;
 public class BlackjackListenerImpl implements BlackjackListener {
     @Override
     public void onMessageCreate(MessageCreateEvent messageCreateEvent) {
-        if (messageCreateEvent.getMessageContent().toLowerCase().startsWith("!blackjack") || messageCreateEvent.getMessageContent().toLowerCase().startsWith("!bj")) {
+        if (messageCreateEvent.getMessageContent().toLowerCase().contains("!blackjack") || messageCreateEvent.getMessageContent().toLowerCase().contains("!bj")) {
 
-            messageCreateEvent.addReactionsToMessage("<450849768600502283>");
+            messageCreateEvent.addReactionsToMessage("<:FatAlbertThinking:450849768600502283>");
 
 
         }

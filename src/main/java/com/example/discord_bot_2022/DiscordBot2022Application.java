@@ -53,7 +53,7 @@ public class DiscordBot2022Application {
 		api.addMessageCreateListener(blackjackListener);
 
 
-		
+
 		return api;
 	}
 }

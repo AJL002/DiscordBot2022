@@ -14,7 +14,7 @@ public class EmojiRateListenerImpl implements EmojiRateListener {
     @Override
     public void onMessageCreate(MessageCreateEvent messageCreateEvent){
 
-        if (messageCreateEvent.getMessageContent().toLowerCase().startsWith("!react")){
+        if (messageCreateEvent.getMessageContent().toLowerCase().contains("!react")){
             Random rand = new Random();
             int x = rand.nextInt(10);
             System.out.println(x);

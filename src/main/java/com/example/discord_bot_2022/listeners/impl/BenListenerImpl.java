@@ -12,7 +12,7 @@ public class BenListenerImpl implements BenListener {
 
     @Override
     public void onMessageCreate(MessageCreateEvent messageCreateEvent) {
-        if (messageCreateEvent.getMessageContent().toLowerCase().startsWith("!ben") || messageCreateEvent.getMessageContent().toLowerCase().startsWith("!b")) {
+        if (messageCreateEvent.getMessageContent().toLowerCase().contains("!ben")) {
             Random rand = new Random();
 
             int x = (rand.nextInt(7));

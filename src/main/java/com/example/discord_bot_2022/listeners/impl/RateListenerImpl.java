@@ -14,7 +14,7 @@ public class RateListenerImpl implements RateListener {
 
     @Override
     public void onMessageCreate(MessageCreateEvent messageCreateEvent) {
-        if(messageCreateEvent.getMessageContent().toLowerCase().startsWith("!rate")) {
+        if(messageCreateEvent.getMessageContent().toLowerCase().contains("!rate")) {
             Matcher matcher = pattern.matcher(messageCreateEvent.getMessageContent());
             System.out.println(matcher.matches());
             System.out.println(messageCreateEvent.getMessageContent());
