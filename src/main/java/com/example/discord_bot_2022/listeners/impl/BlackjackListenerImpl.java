@@ -11,10 +11,10 @@ import java.util.Hashtable;
 public class BlackjackListenerImpl implements BlackjackListener {
     @Override
     public void onMessageCreate(MessageCreateEvent messageCreateEvent) {
-        String ben = "<:ben:947955458835095582>";
+
         if (messageCreateEvent.getMessageContent().toLowerCase().contains("!blackjack") || messageCreateEvent.getMessageContent().toLowerCase().contains("!bj")) {
             messageCreateEvent.getChannel().sendMessage("blackjack");
-            messageCreateEvent.addReactionsToMessage(ben);
+            messageCreateEvent.addReactionsToMessage("ben:947955458835095582");
 
 
         }
