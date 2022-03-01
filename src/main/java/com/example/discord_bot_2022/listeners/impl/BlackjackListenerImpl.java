@@ -43,11 +43,13 @@ public class BlackjackListenerImpl implements BlackjackListener {
             Random rand = new Random();
             String[] val = {":a:", ":two:", ":three:",":four:", ":five:", ":six:", ":seven:", ":eight:", ":nine:", ":ten:", "<:JackOhReally:895893197224546304>", ":woman:", ":crown:"};
             String card = val[rand.nextInt(val.length)];
-
+            String user = messageCreateEvent.getMessageAuthor().getDisplayName();
             EmbedBuilder embed = new EmbedBuilder()
                     .setTitle("Blackjack w/ Ben")
                     .setDescription("Can you beat Ben?")
                     .setAuthor("Ben", "https://outfit7talkingfriends.fandom.com/wiki/Ben", "https://media.discordapp.net/attachments/938298237142564904/948021991418499082/talking_ben.jpg")
+                    .addInlineField("Ben", "")
+                    .addInlineField(user, "")
                     .setColor(Color.green);
             messageCreateEvent.getChannel().sendMessage(embed);
 
@@ -55,7 +57,7 @@ public class BlackjackListenerImpl implements BlackjackListener {
 
 
 //            messageCreateEvent.getChannel().sendMessage("Welcome to Blackjack!");
-//            messageCreateEvent.getChannel().sendMessage(deck.get(card));
+            messageCreateEvent.getChannel().sendMessage(deck.get(card));
 
 
 
