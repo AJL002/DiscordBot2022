@@ -15,20 +15,22 @@ import org.springframework.core.env.Environment;
 public class DiscordBot2022Application {
 	@Autowired
 	private Environment env;
-	@Autowired
-	private PingListener pingListener;
+//	@Autowired
+//	private PingListener pingListener;
+//	@Autowired
+//	private CircleListener circleListener;
+//	@Autowired
+//	private GameListener gameListener;
 	@Autowired
 	private RateListener rateListener;
-	@Autowired
-	private CircleListener circleListener;
-	@Autowired
-	private GameListener gameListener;
 	@Autowired
 	private BenListener benListener;
 	@Autowired
 	private EmojiRateListener emojiRateListener;
 	@Autowired
 	private BlackjackListener blackjackListener;
+	@Autowired
+	private ChooseListener chooseListener;
 
 	public static void main(String[] args) {
 		SpringApplication.run(DiscordBot2022Application.class, args);
@@ -43,7 +45,7 @@ public class DiscordBot2022Application {
 				.login()
 				.join();
 
-		api.updateActivity("No.");
+		api.updateActivity("MAINTENANCE");
 //		api.addMessageCreateListener(pingListener);
 //		api.addMessageCreateListener(circleListener);
 //		api.addMessageCreateListener(gameListener);
@@ -51,6 +53,7 @@ public class DiscordBot2022Application {
 		api.addMessageCreateListener(benListener);
 		api.addMessageCreateListener(emojiRateListener);
 		api.addMessageCreateListener(blackjackListener);
+		api.addMessageCreateListener(chooseListener);
 
 
 
