@@ -45,7 +45,7 @@ public class DiscordBot2022Application {
 				.login()
 				.join();
 
-		api.updateActivity("MAINTENANCE");
+		api.updateActivity("No.");
 //		api.addMessageCreateListener(pingListener);
 //		api.addMessageCreateListener(circleListener);
 //		api.addMessageCreateListener(gameListener);
