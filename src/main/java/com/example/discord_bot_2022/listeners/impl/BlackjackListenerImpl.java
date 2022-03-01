@@ -1,14 +1,18 @@
 package com.example.discord_bot_2022.listeners.impl;
 
 import com.example.discord_bot_2022.listeners.BlackjackListener;
+import org.javacord.api.DiscordApi;
+import org.javacord.api.DiscordApiBuilder;
 import org.javacord.api.entity.channel.TextChannel;
 import org.javacord.api.entity.emoji.Emoji;
 import org.javacord.api.entity.message.MessageBuilder;
 import org.javacord.api.entity.message.component.ActionRow;
 import org.javacord.api.entity.message.component.Button;
+import org.javacord.api.entity.message.embed.EmbedBuilder;
 import org.javacord.api.event.message.MessageCreateEvent;
 import org.springframework.stereotype.Component;
 
+import java.awt.*;
 import java.util.Hashtable;
 import java.util.Random;
 import java.util.concurrent.CompletableFuture;
@@ -40,19 +44,31 @@ public class BlackjackListenerImpl implements BlackjackListener {
             String[] val = {":a:", ":two:", ":three:",":four:", ":five:", ":six:", ":seven:", ":eight:", ":nine:", ":ten:", "<:JackOhReally:895893197224546304>", ":woman:", ":crown:"};
             String card = val[rand.nextInt(val.length)];
 
-//            messageCreateEvent.getChannel().sendMessage(card);
+            EmbedBuilder embed = new EmbedBuilder()
+                    .setTitle("Blackjack w/ Ben")
+                    .setDescription("Can you beat Ben?")
+                    .setAuthor("Ben", "https://outfit7talkingfriends.fandom.com/wiki/Ben", "https://media.discordapp.net/attachments/938298237142564904/948021991418499082/talking_ben.jpg")
+                    .setColor(Color.green);
+            messageCreateEvent.getChannel().sendMessage(embed);
+
+
+
+
+//            messageCreateEvent.getChannel().sendMessage("Welcome to Blackjack!");
 //            messageCreateEvent.getChannel().sendMessage(deck.get(card));
 
-            TextChannel channel = messageCreateEvent.getChannel();
 
-            new MessageBuilder()
-                    .setContent("Choose an option")
-                    .addComponents(
-                            ActionRow.of(Button.success("success", "Hit"),
-                                    Button.danger("danger", "Stay")
-                                    ))
-                    .send(channel);
-            
+
+
+            //Component interaction demo
+//            TextChannel channel = messageCreateEvent.getChannel();
+//            new MessageBuilder()
+//                    .setContent("Choose an option")
+//                    .addComponents(
+//                            ActionRow.of(Button.success("success", "Hit"),
+//                                    Button.danger("danger", "Stay")
+//                                    ))
+//                    .send(channel);
         }
     }
 }
