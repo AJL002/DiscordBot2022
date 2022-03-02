@@ -27,8 +27,8 @@ public class DiscordBot2022Application {
 	private BenListener benListener;
 	@Autowired
 	private EmojiRateListener emojiRateListener;
-	@Autowired
-	private BlackjackListener blackjackListener;
+//	@Autowired
+//	private BlackjackListener blackjackListener;
 	@Autowired
 	private ChooseListener chooseListener;
 
@@ -52,7 +52,7 @@ public class DiscordBot2022Application {
 		api.addMessageCreateListener(rateListener);
 		api.addMessageCreateListener(benListener);
 		api.addMessageCreateListener(emojiRateListener);
-		api.addMessageCreateListener(blackjackListener);
+//		api.addMessageCreateListener(blackjackListener);
 		api.addMessageCreateListener(chooseListener);
 
 
