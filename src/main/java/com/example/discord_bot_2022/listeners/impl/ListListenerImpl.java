@@ -12,13 +12,13 @@ public class ListListenerImpl implements ListListener {
     @Override
     public void onMessageCreate(MessageCreateEvent messageCreateEvent) {
         String msg = messageCreateEvent.getMessageContent();
-        if(msg.toLowerCase().contains("!list")){
-            if (msg.equalsIgnoreCase("!list")){
+        if(msg.toLowerCase().contains("!blist")){
+            if (msg.equalsIgnoreCase("!blist")){
                 messageCreateEvent.getChannel().sendMessage("`Please try again`");
 
             }
             else {
-                String[] temp = msg.toLowerCase().replace("!list ", "").split(" ");
+                String[] temp = msg.toLowerCase().replace("!blist ", "").split(" ");
 
                 List<String> tempList = new ArrayList<>(Arrays.asList(temp).subList(0, temp.length));
                 List<String> newList = new ArrayList<>();
