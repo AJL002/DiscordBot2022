@@ -33,6 +33,8 @@ public class DiscordBot2022Application {
 	private ChooseListener chooseListener;
 	@Autowired
 	private ListListener listListener;
+	@Autowired
+	private TierListener tierListener;
 
 	public static void main(String[] args) {
 		SpringApplication.run(DiscordBot2022Application.class, args);
@@ -57,6 +59,7 @@ public class DiscordBot2022Application {
 //		api.addMessageCreateListener(blackjackListener);
 		api.addMessageCreateListener(chooseListener);
 		api.addMessageCreateListener(listListener);
+		api.addMessageCreateListener(tierListener);
 
 
 

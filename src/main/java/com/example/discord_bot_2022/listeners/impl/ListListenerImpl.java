@@ -12,7 +12,7 @@ public class ListListenerImpl implements ListListener {
     @Override
     public void onMessageCreate(MessageCreateEvent messageCreateEvent) {
         String msg = messageCreateEvent.getMessageContent();
-        if(msg.toLowerCase().contains("!blist")){
+        if(msg.toLowerCase().startsWith("!blist")){
             if (msg.equalsIgnoreCase("!blist")){
                 messageCreateEvent.getChannel().sendMessage("`Please try again`");
 
