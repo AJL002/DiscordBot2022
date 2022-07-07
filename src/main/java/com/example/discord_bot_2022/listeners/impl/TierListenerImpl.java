@@ -17,7 +17,7 @@ public class TierListenerImpl implements TierListener {
     public void onMessageCreate(MessageCreateEvent messageCreateEvent) {
         String msg = messageCreateEvent.getMessageContent();
 
-        if(messageCreateEvent.getMessageContent().equals("!tier")) {
+        if(messageCreateEvent.getMessageContent().startsWith("!tier")) {
             if (msg.equalsIgnoreCase("!tier")){
                 messageCreateEvent.getChannel().sendMessage("`Please try again`");
 
@@ -33,27 +33,27 @@ public class TierListenerImpl implements TierListener {
                 List<String> D = new ArrayList<>();
                 List<String> F = new ArrayList<>();
 
-                for(int i = 0; i < list.length; i++){
+                for (String s : list) {
                     int x = rand.nextInt(6);
 
-                    switch(x) {
+                    switch (x) {
                         case 0:
-                            S.add(list[i]);
+                            S.add(s);
                             break;
                         case 1:
-                            A.add(list[i]);
+                            A.add(s);
                             break;
                         case 2:
-                            B.add(list[i]);
+                            B.add(s);
                             break;
                         case 3:
-                            C.add(list[i]);
+                            C.add(s);
                             break;
                         case 4:
-                            D.add(list[i]);
+                            D.add(s);
                             break;
                         case 5:
-                            F.add(list[i]);
+                            F.add(s);
                             break;
                     }
                 }
